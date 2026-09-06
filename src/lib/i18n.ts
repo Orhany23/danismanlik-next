@@ -4,6 +4,7 @@ export type Dictionary = {
   nav: {
     brand: string;
     packages: string;
+    support: string;
     about: string;
     services: string;
     process: string;
@@ -224,6 +225,55 @@ export type Dictionary = {
   };
   loading: string;
   whatsapp: string;
+  support: {
+    metaTitle: string;
+    metaDescription: string;
+    label: string;
+    title: string;
+    subtitle: string;
+    disclaimer: string;
+    moods: {
+      title: string;
+      subtitle: string;
+      items: Array<{ key: string; label: string; emoji: string; suggestion: string }>;
+    };
+    journal: {
+      title: string;
+      subtitle: string;
+      placeholder: string;
+      charCount: string;
+      addLabel: string;
+      deleteLabel: string;
+      emptyState: string;
+      privacyNote: string;
+      sessionNote: string;
+    };
+    grounding: {
+      title: string;
+      subtitle: string;
+      startLabel: string;
+      skipLabel: string;
+      nextLabel: string;
+      restartLabel: string;
+      doneTitle: string;
+      doneText: string;
+      steps: Array<{ count: string; sense: string; prompt: string }>;
+    };
+    professional: {
+      title: string;
+      text: string;
+      linkLabel: string;
+      linkHref: string;
+    };
+    emergency: {
+      title: string;
+      text: string;
+      trText: string;
+      otherText: string;
+      trustedText: string;
+      appNote: string;
+    };
+  };
 };
 
 export const dictionaries: Record<Locale, Dictionary> = {
@@ -231,6 +281,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     nav: {
       brand: "Orhan Yaşlı",
       packages: "Paketler",
+      support: "Denge",
       about: "Hakkımda",
       services: "Hizmetler",
       process: "Süreç",
@@ -763,12 +814,118 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     loading: "Orhan Yaşlı",
     whatsapp: "WhatsApp'tan yazın",
+    support: {
+      metaTitle: "Denge — Psikolojik Destek Rehberi | Orhan Yaşlı",
+      metaDescription:
+        "Anlık ruh hali için yargılamayan öneriler, özel bir günlük alanı ve 5-4-3-2-1 farkındalık egzersizi. Genel bilgilendirme amaçlıdır; tanı veya tedavi değildir.",
+      label: "Denge",
+      title: "Şu an nasıl<br><em>hissediyorsun?</em>",
+      subtitle:
+        "Burası küçük bir mola alanı. Ne yazarsan yaz, kimse okumuyor — sadece sana ait.",
+      disclaimer:
+        "Bu sayfa genel bilgilendirme içindir; tanı, terapi veya acil yardım hizmeti değildir. Öneriler önceden hazırlanmış metinlerdir, yapay zekâ değerlendirmesi yapılmaz.",
+      moods: {
+        title: "Duygu durumu",
+        subtitle: "Şu anki haline en yakın olanı seç.",
+        items: [
+          {
+            key: "anxious",
+            label: "Kaygılı",
+            emoji: "🌊",
+            suggestion:
+              "Kaygı, bedenin seni korumaya çalışmasının bir yolu — tehlikeli olduğun anlamına gelmez. Ayaklarının yere değdiğini hisset, 4 saniye nefes al, 6 saniye ver. Aşağıdaki 5-4-3-2-1 egzersizi şu an için iyi gelebilir.",
+          },
+          {
+            key: "sad",
+            label: "Üzgün",
+            emoji: "🌧️",
+            suggestion:
+              "Üzülmek, bir şeyin senin için önemli olduğunun işareti. Bu duyguyu itmek zorunda değilsin; sadece bir süre yanında oturabilirsin. İstersen aşağıya bunun ne ile ilgili olduğunu yazabilirsin — kimse okumuyor.",
+          },
+          {
+            key: "overwhelmed",
+            label: "Yorgun / Bunalmış",
+            emoji: "🌫️",
+            suggestion:
+              "Her şey birden fazla geliyor olabilir. Şu an tek bir şeyi çözmen gerekmiyor. Bir dakikalığına omuzlarını gevşet, çeneni bırak. İstersen aklındakileri aşağıya sırayla dökebilirsin — hepsini bir anda taşımana gerek yok.",
+          },
+          {
+            key: "angry",
+            label: "Öfkeli",
+            emoji: "🔥",
+            suggestion:
+              "Öfke de diğerleri kadar geçerli bir duygu. Bedenindeki gerilimi fark et; istersen ellerini sıkıp gevşeterek bunu dışarı ver. Ne olduğunu yargılamadan, olduğu gibi aşağıya yazabilirsin.",
+          },
+          {
+            key: "numb",
+            label: "Boş / Hissizim",
+            emoji: "🌑",
+            suggestion:
+              "Bazen zihin, fazla gelen şeylere karşı kendini kapatır — bu da bir koruma biçimi. Zorlamana gerek yok. İstersen sadece burada bir süre kal, ya da 5-4-3-2-1 egzersizi seni yavaşça şimdiki ana geri getirebilir.",
+          },
+          {
+            key: "hopeful",
+            label: "Umutlu",
+            emoji: "🌱",
+            suggestion:
+              "Güzel — bu hissi fark ettiğin için teşekkürler kendine. İstersen bugün seni buraya taşıyan şeyi aşağıya not düşebilirsin; ileride geri dönüp okumak iyi gelebilir.",
+          },
+        ],
+      },
+      journal: {
+        title: "Özel not alanı",
+        subtitle: "Aklından geçenleri buraya bırak. Kaydedilmiyor, sadece bu an için.",
+        placeholder: "Ne düşünüyorsun, ne hissediyorsun...",
+        charCount: "karakter",
+        addLabel: "Not ekle",
+        deleteLabel: "Sil",
+        emptyState: "Henüz bir not eklemedin.",
+        privacyNote:
+          "Bu notlar hiçbir yere kaydedilmez — sayfadan ayrıldığında veya sayfayı yenilediğinde kaybolur.",
+        sessionNote: "Sadece bu oturum boyunca, sadece bu cihazda görünür.",
+      },
+      grounding: {
+        title: "5-4-3-2-1 Farkındalık Egzersizi",
+        subtitle:
+          "Şimdiki ana dönmene yardımcı olabilecek kısa bir egzersiz. İstediğin adımı atlayabilir, istediğin an bırakabilirsin.",
+        startLabel: "Egzersize başla",
+        skipLabel: "Bu adımı atla",
+        nextLabel: "Sonraki",
+        restartLabel: "Baştan başla",
+        doneTitle: "Tamamlandı",
+        doneText: "Nasıl hissettiğine dikkat et. İstersen tekrar başlayabilirsin.",
+        steps: [
+          { count: "5", sense: "Görme", prompt: "Etrafında görebildiğin 5 şeyi fark et." },
+          { count: "4", sense: "Dokunma", prompt: "Dokunabildiğin 4 şeyi hisset." },
+          { count: "3", sense: "Duyma", prompt: "Duyabildiğin 3 sesi fark et." },
+          { count: "2", sense: "Koklama", prompt: "Koklayabildiğin 2 şeyi fark et." },
+          { count: "1", sense: "Tatma", prompt: "Tadabildiğin 1 şeyi fark et." },
+        ],
+      },
+      professional: {
+        title: "Profesyonel destek",
+        text:
+          "Bu sayfa bir mola alanı — profesyonel desteğin yerini tutmaz. Düzenli olarak zorlanıyorsan, bir uzmanla konuşmak fark yaratabilir. Türkiye'de Sağlık Bakanlığı'nın Merkezi Hekim Randevu Sistemi üzerinden bir ruh sağlığı uzmanından randevu alabilirsin.",
+        linkLabel: "MHRS üzerinden randevu al",
+        linkHref: "https://www.mhrs.gov.tr/",
+      },
+      emergency: {
+        title: "Acil durumdaysan",
+        text: "Kendine veya bir başkasına zarar verme riski hissediyorsan, lütfen hemen yardım iste:",
+        trText: "Türkiye'de: 112'yi arayın veya en yakın acil servise gidin.",
+        otherText: "Türkiye dışındaysan: bulunduğun ülkenin yerel acil yardım hattını arayın.",
+        trustedText: "Mümkünse güvendiğin birine (aile, arkadaş) şu an ne yaşadığını haber ver.",
+        appNote:
+          "Bu sayfa izlenmiyor ve senin adına kimseyi arayamaz — yardım çağırmak sana kalıyor.",
+      },
+    },
   },
 
   en: {
     nav: {
       brand: "Orhan Yaşlı",
       packages: "Packages",
+      support: "Balance",
       about: "About",
       services: "Services",
       process: "Process",
@@ -1272,6 +1429,111 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     loading: "Orhan Yaşlı",
     whatsapp: "Message on WhatsApp",
+    support: {
+      metaTitle: "Balance — Psychological Support Guide | Orhan Yaşlı",
+      metaDescription:
+        "Non-judgmental suggestions for how you feel right now, a private journal space, and a 5-4-3-2-1 grounding exercise. For general information only; not a diagnosis or treatment.",
+      label: "Balance",
+      title: "How are you<br><em>feeling right now?</em>",
+      subtitle:
+        "This is a small space to pause. Whatever you write here is just for you — no one reads it.",
+      disclaimer:
+        "This page is for general information only; it is not diagnosis, therapy, or emergency care. Suggestions are pre-written text, not an AI assessment.",
+      moods: {
+        title: "How you feel",
+        subtitle: "Pick whichever is closest to how you feel right now.",
+        items: [
+          {
+            key: "anxious",
+            label: "Anxious",
+            emoji: "🌊",
+            suggestion:
+              "Anxiety is your body trying to protect you — it doesn't mean you're in danger. Feel your feet on the ground, breathe in for 4 seconds, out for 6. The 5-4-3-2-1 exercise below might help right now.",
+          },
+          {
+            key: "sad",
+            label: "Sad",
+            emoji: "🌧️",
+            suggestion:
+              "Feeling sad is a sign that something matters to you. You don't have to push it away — you can just sit with it for a while. If you want, write down what it's about below — no one reads it.",
+          },
+          {
+            key: "overwhelmed",
+            label: "Overwhelmed",
+            emoji: "🌫️",
+            suggestion:
+              "It might feel like too much at once. You don't need to solve everything right now. Let your shoulders drop, unclench your jaw. If it helps, list what's on your mind below, one at a time — you don't have to carry it all together.",
+          },
+          {
+            key: "angry",
+            label: "Angry",
+            emoji: "🔥",
+            suggestion:
+              "Anger is as valid as any other feeling. Notice the tension in your body; you can clench and release your hands to let some of it out. You can write down what happened below, without judging it.",
+          },
+          {
+            key: "numb",
+            label: "Numb / Empty",
+            emoji: "🌑",
+            suggestion:
+              "Sometimes the mind shuts down when there's too much going on — that's a form of protection too. You don't have to force anything. You can just stay here a while, or the 5-4-3-2-1 exercise might gently bring you back to the present.",
+          },
+          {
+            key: "hopeful",
+            label: "Hopeful",
+            emoji: "🌱",
+            suggestion:
+              "That's good — thank yourself for noticing it. If you'd like, write down what brought you here today; it might be nice to read back later.",
+          },
+        ],
+      },
+      journal: {
+        title: "Private notes",
+        subtitle: "Leave what's on your mind here. Nothing is saved — this is just for now.",
+        placeholder: "What are you thinking or feeling...",
+        charCount: "characters",
+        addLabel: "Add note",
+        deleteLabel: "Delete",
+        emptyState: "You haven't added a note yet.",
+        privacyNote:
+          "These notes are never saved anywhere — they disappear when you leave or refresh the page.",
+        sessionNote: "Visible only for this session, only on this device.",
+      },
+      grounding: {
+        title: "5-4-3-2-1 Grounding Exercise",
+        subtitle:
+          "A short exercise that can help bring you back to the present moment. Skip any step you'd like, or stop whenever you want.",
+        startLabel: "Start the exercise",
+        skipLabel: "Skip this step",
+        nextLabel: "Next",
+        restartLabel: "Start over",
+        doneTitle: "Done",
+        doneText: "Notice how you feel. You can start again if you'd like.",
+        steps: [
+          { count: "5", sense: "See", prompt: "Notice 5 things you can see around you." },
+          { count: "4", sense: "Touch", prompt: "Notice 4 things you can touch." },
+          { count: "3", sense: "Hear", prompt: "Notice 3 sounds you can hear." },
+          { count: "2", sense: "Smell", prompt: "Notice 2 things you can smell." },
+          { count: "1", sense: "Taste", prompt: "Notice 1 thing you can taste." },
+        ],
+      },
+      professional: {
+        title: "Professional support",
+        text:
+          "This page is a place to pause — it doesn't replace professional support. If you're struggling regularly, talking to a specialist can make a real difference. In Turkey, you can book a mental health professional through the Ministry of Health's central appointment system.",
+        linkLabel: "Book via MHRS",
+        linkHref: "https://www.mhrs.gov.tr/",
+      },
+      emergency: {
+        title: "If this is an emergency",
+        text: "If you feel at risk of harming yourself or someone else, please get help right away:",
+        trText: "In Turkey: call 112 or go to the nearest emergency department.",
+        otherText: "Outside Turkey: call your local emergency number.",
+        trustedText: "If you can, let someone you trust (family, a friend) know what you're going through right now.",
+        appNote:
+          "This page is not monitored and cannot call for help on your behalf — reaching out is up to you.",
+      },
+    },
   },
 };
 
