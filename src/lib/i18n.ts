@@ -515,12 +515,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
         {
           initials: "E.K.",
           meta: "12. sınıf · YKS",
-          text: "Programı birlikte kurduğumuz için ne zaman ne çalışacağımı bilmek beni rahatlattı. Deneme sonrası analiz alışkanlığı kazandım.",
+          text: "Eskiden akşam olunca 'bugün ne çalışsam' diye kafam karışırdı. Şimdi haftalık programım hazır, ben sadece uyguluyorum. Deneme sonuçlarını da birlikte konuşuyoruz, nerede takıldığımı görüyorum.",
         },
         {
           initials: "M.A.",
           meta: "8. sınıf velisi · LGS",
-          text: "Evde \"ders çalış\" tartışması azaldı. Haftalık takip sayesinde süreci birlikte görebiliyoruz.",
+          text: "Açıkçası önceden her akşam 'ders çalış' kavgası çıkardı evde. Artık aramıza girmiyorum, koçu ile kendi programını yürütüyor. Haftalık raporları görünce ben de rahatladım.",
         },
       ],
     },
@@ -1053,12 +1053,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
         {
           initials: "E.K.",
           meta: "Grade 12 · YKS",
-          text: "Building the plan together made it clear what to study and when. I picked up the habit of analysing every mock exam.",
+          text: "I used to sit down at night with no idea what to study. Now I have a weekly plan already set, I just follow it — and we go over every mock exam together so I actually see where I'm stuck.",
         },
         {
           initials: "M.A.",
           meta: "Parent, grade 8 · LGS",
-          text: "The \"go study\" argument at home has faded. Weekly tracking lets us follow the process together.",
+          text: "Honestly, 'go study' used to turn into a fight every evening. Now I stay out of it — he runs his own plan with his coach. Seeing the weekly reports is what actually put my mind at ease.",
         },
       ],
     },
