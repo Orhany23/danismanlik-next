@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useLocale } from "@/components/LocaleProvider";
 import PsiMark from "@/components/PsiMark";
-import { Languages } from "lucide-react";
 
 // Bağlantı hedefi tek yerde çözülür: "modal:privacy" hukuki metni açar,
 // http(s) dış bağlantı, gerisi uygulama içi rota (ör. "/paketler#kocluk").
@@ -31,7 +30,7 @@ function FooterLink({ href, label }: { href: string; label: string }) {
 }
 
 export default function Footer() {
-  const { dict, toggleLocale } = useLocale();
+  const { dict } = useLocale();
   const t = dict.footer;
 
   return (
@@ -42,10 +41,6 @@ export default function Footer() {
           <div className="footer-brand">
             <span className="footer-brand-name">{t.brand}</span>
             <p>{t.desc}</p>
-            <button type="button" onClick={toggleLocale} className="footer-lang">
-              <Languages strokeWidth={1.8} aria-hidden="true" />
-              <span>{t.langLabel}: {dict.nav.lang === "EN" ? "Türkçe" : "English"}</span>
-            </button>
           </div>
           <div className="footer-col">
             <h4>{t.services}</h4>
