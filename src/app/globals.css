@@ -1713,3 +1713,138 @@ body::after {
 @media (hover: none) {
   .domain-card { transform: none !important; }
 }
+
+/* ============================================================
+   DENGE — PSİKOLOJİK DESTEK REHBERİ (/psikolojik-destek)
+   İzole sınıflar; başka bileşenleri etkilemez.
+   ============================================================ */
+
+.support-page { padding-top: 60px; }
+.support-container { max-width: 780px; }
+.support-head { margin-bottom: 40px; }
+
+.support-block {
+  border-top: 1px solid var(--clr-border);
+  padding-top: 32px;
+  margin-top: 32px;
+}
+.support-block-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--clr-text);
+}
+.support-block-subtitle {
+  font-size: 0.95rem;
+  color: var(--clr-text2);
+  margin-top: 6px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Acil durum kutusu — her zaman görünür, en üstte */
+.support-emergency {
+  background: var(--clr-sage-tint);
+  border: 1.5px solid var(--clr-sage);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  margin-top: 8px;
+}
+.support-emergency-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--clr-sage-dark);
+}
+.support-emergency-text { margin-top: 8px; font-size: 0.95rem; color: var(--clr-text); }
+.support-emergency-list { margin-top: 10px; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+.support-emergency-list li { font-size: 0.94rem; color: var(--clr-text); line-height: 1.55; }
+.support-emergency-note { margin-top: 12px; font-size: 0.82rem; color: var(--clr-text3); }
+
+/* Duygu durumu seçimi */
+.support-mood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.support-mood-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 16px 10px;
+  border: 1.5px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  background: var(--clr-card);
+  color: var(--clr-text);
+  font-size: 0.85rem; font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s var(--transition), transform 0.2s var(--transition), background 0.2s var(--transition);
+}
+.support-mood-btn:hover { border-color: var(--clr-primary); transform: translateY(-2px); }
+.support-mood-btn--active { border-color: var(--clr-primary); background: var(--clr-accent-tint); }
+.support-mood-emoji { font-size: 1.6rem; line-height: 1; }
+.support-mood-suggestion {
+  margin-top: 18px;
+  background: var(--clr-accent-tint);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+}
+.support-mood-suggestion p { font-size: 0.95rem; color: var(--clr-text); line-height: 1.7; }
+
+/* Oturumluk günlük */
+.support-journal-textarea {
+  font-family: inherit; font-size: 0.96rem; line-height: 1.6;
+  padding: 14px 16px; min-height: 120px; resize: vertical;
+  border: 1.5px solid var(--clr-border); border-radius: var(--radius-sm);
+  background: var(--clr-bg); color: var(--clr-text); width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.support-journal-textarea:focus { outline: none; border-color: var(--clr-primary); box-shadow: 0 0 0 4px var(--clr-accent-tint); }
+.support-journal-editor-row {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 10px; gap: 12px; flex-wrap: wrap;
+}
+.support-journal-count { font-size: 0.8rem; color: var(--clr-text3); }
+.support-journal-list { margin-top: 22px; display: flex; flex-direction: column; gap: 12px; }
+.support-journal-empty { font-size: 0.9rem; color: var(--clr-text3); font-style: italic; }
+.support-journal-entry {
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 14px;
+  background: var(--clr-card);
+}
+.support-journal-entry-text {
+  font-size: 0.92rem; color: var(--clr-text); line-height: 1.6;
+  white-space: pre-wrap; word-break: break-word;
+}
+.support-journal-delete {
+  flex-shrink: 0; font-size: 0.78rem; font-weight: 600; color: var(--clr-text3);
+  background: transparent; border: none; cursor: pointer; padding: 4px 6px;
+  transition: color 0.2s;
+}
+.support-journal-delete:hover { color: #C0392B; }
+.support-journal-privacy { margin-top: 16px; font-size: 0.8rem; color: var(--clr-text3); line-height: 1.6; }
+
+/* 5-4-3-2-1 egzersizi */
+.support-grounding-card {
+  margin-top: 6px;
+  border: 1.5px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: 28px 26px;
+  text-align: center;
+  background: var(--clr-card);
+}
+.support-grounding-count {
+  font-family: var(--font-display);
+  font-size: 2.4rem; color: var(--clr-primary); line-height: 1;
+}
+.support-grounding-sense { font-family: var(--font-display); font-size: 1.2rem; margin-top: 8px; }
+.support-grounding-prompt { font-size: 0.95rem; color: var(--clr-text2); margin-top: 8px; }
+.support-grounding-actions { margin-top: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.support-grounding-card--done { border-color: var(--clr-primary); }
+
+.support-disclaimer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--clr-border);
+  font-size: 0.8rem;
+  color: var(--clr-text3);
+  line-height: 1.7;
+}
